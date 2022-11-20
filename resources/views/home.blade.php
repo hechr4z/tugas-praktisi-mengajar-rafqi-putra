@@ -15,14 +15,8 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-
-                    @if(Auth::check() && Auth::user()->level == "admin")
-                    <h1>Login Sebagai: {{ Auth::user()->level }}</h1>
-                    @endif
-
-                    @if(Auth::check() && Auth::user()->level == "editor")
-                    <h1>Login Sebagai: {{ Auth::user()->level }}</h1>
-                    @endif
+                    <h1>Login sebagai:
+                        {{ Auth::user()->level }}</h1>
                 </div>
             </div>
         </div>
